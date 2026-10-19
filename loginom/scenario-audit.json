@@ -1,0 +1,138 @@
+{
+  "expressions": [
+    {
+      "Name": "sale_year",
+      "DisplayName": "Год продажи",
+      "DataType": "dtInteger",
+      "Expression": "Year(Date)"
+    },
+    {
+      "Name": "house_age",
+      "DisplayName": "Возраст дома",
+      "DataType": "dtFloat",
+      "Expression": "IF(IsNull(COL23), Null, Year(Date) - COL23)"
+    },
+    {
+      "Name": "price_per_area",
+      "DisplayName": "Цена за квадратный метр",
+      "DataType": "dtFloat",
+      "Expression": "IF(IsNull(COL25), Null, IF(COL25 > 0, Price / COL25, Null))"
+    },
+    {
+      "Name": "price_category",
+      "DisplayName": "Категория цены",
+      "DataType": "dtInteger",
+      "Expression": "IF(Price < 650000, 1,\n  IF(Price < 1000000, 2,\n    IF(Price < 1500000, 3,\n      IF(Price < 2000000, 4, 5))))"
+    }
+  ],
+  "training_results": [
+    {
+      "TotalSamples": "5398",
+      "TotalSelectedSamples": "5398",
+      "TrainSamples": "5398",
+      "TestSamples": "0",
+      "ValidationSamples": "0",
+      "ValidationPartitions": "0",
+      "TrainRMSError": "0",
+      "TestRMSError": "0",
+      "CVRMSError": "0"
+    }
+  ],
+  "regression_statistics": [
+    {
+      "SamplesCount": "5398",
+      "MinusTwoLogLikelihood": "158078.21781914085",
+      "StdDev": "553237.0483226306",
+      "RSquared": "0.34280826823202737",
+      "RSquaredAdjusted": "0.34268647584289313",
+      "PValue": "5.551115123125783E-16",
+      "MaxLikelihood": "-79039.10890957042",
+      "MeanSquaredError": "306071231636.7367",
+      "SumOfSquaredError": "1651560365911831.2",
+      "ExplainedSumOfSquares": "861496761981143.2",
+      "FValue": "2814.6936821674835"
+    }
+  ],
+  "links": [
+    {
+      "source": {
+        "NodeGuid": "6620f9de-e585-39c7-88a9-35255088ebb7",
+        "PortGuid": "b671426b-642b-3e7c-b9a9-9653573f3199"
+      },
+      "target": {
+        "NodeGuid": "c79402d1-6f01-4fc8-87e7-5fb4a6e4ba28",
+        "PortGuid": "455b65c3-0587-3a9c-b47e-9b0d285bff3c"
+      }
+    },
+    {
+      "source": {
+        "NodeGuid": "c79402d1-6f01-4fc8-87e7-5fb4a6e4ba28",
+        "PortGuid": "58f7e6c3-511e-39d7-8853-036e0a1a7612"
+      },
+      "target": {
+        "NodeGuid": "603d4658-a05c-47ac-ad6a-eee547d320b0",
+        "PortGuid": "9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"
+      }
+    },
+    {
+      "source": {
+        "NodeGuid": "603d4658-a05c-47ac-ad6a-eee547d320b0",
+        "PortGuid": "4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"
+      },
+      "target": {
+        "NodeGuid": "0dce7277-dfe4-49d2-be55-939b641563a7",
+        "PortGuid": "9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"
+      }
+    },
+    {
+      "source": {
+        "NodeGuid": "0dce7277-dfe4-49d2-be55-939b641563a7",
+        "PortGuid": "4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"
+      },
+      "target": {
+        "NodeGuid": "8e646e8a-9ef6-44aa-a4d7-b0c76467e6fd",
+        "PortGuid": "9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"
+      }
+    },
+    {
+      "source": {
+        "NodeGuid": "8e646e8a-9ef6-44aa-a4d7-b0c76467e6fd",
+        "PortGuid": "4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"
+      },
+      "target": {
+        "NodeGuid": "03121ba7-0615-423f-96b0-7b09d2a3085c",
+        "PortGuid": "9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"
+      }
+    },
+    {
+      "source": {
+        "NodeGuid": "0dce7277-dfe4-49d2-be55-939b641563a7",
+        "PortGuid": "4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"
+      },
+      "target": {
+        "NodeGuid": "0ad17e50-1b74-451b-87f2-19f02934e4bf",
+        "PortGuid": "9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"
+      }
+    },
+    {
+      "source": {
+        "NodeGuid": "0ad17e50-1b74-451b-87f2-19f02934e4bf",
+        "PortGuid": "4ba0e2c2-69ad-3a32-bbdc-75714efe7a51"
+      },
+      "target": {
+        "NodeGuid": "2ce56891-be92-4e94-9b15-efda37f5e953",
+        "PortGuid": "9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"
+      }
+    },
+    {
+      "source": {
+        "NodeGuid": "2ce56891-be92-4e94-9b15-efda37f5e953",
+        "PortGuid": "0b3d620f-18d5-38da-8d37-7159844f74d8"
+      },
+      "target": {
+        "NodeGuid": "5e16faca-75b3-4653-bc77-8e596dcd6a98",
+        "PortGuid": "9dc72a3f-56bf-3bfc-84ec-f979daf4da6b"
+      }
+    }
+  ]
+}

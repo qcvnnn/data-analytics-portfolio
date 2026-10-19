@@ -1,0 +1,18 @@
+{
+  "raw_rows": 13580,
+  "filtered_rows": 6748,
+  "train_rows": 5398,
+  "test_rows": 1350,
+  "seed": 2026,
+  "features": [
+    "BuildingArea"
+  ],
+  "target": "Price",
+  "intercept": 349809.8725611051,
+  "coefficient": 5056.424756955632,
+  "test_mae": 371599.8748854905,
+  "test_rmse": 564297.7797848324,
+  "test_r2": 0.3437548871823288,
+  "baseline_test_rmse": 696600.7325443408,
+  "note": "Independent Python baseline. Different RNG/split from Loginom; not its test metrics."
+}

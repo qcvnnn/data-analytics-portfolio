@@ -1,0 +1,59 @@
+[
+  {
+    "type": "clusteredColumnChart",
+    "fields": [
+      "database.Magnitude",
+      "database.Средняя глубина"
+    ]
+  },
+  {
+    "type": "lineChart",
+    "fields": [
+      "database.Date.Изменение.Иерархия дат.Год",
+      "database.Число землетрясений"
+    ]
+  },
+  {
+    "type": "pieChart",
+    "fields": [
+      "database.Type",
+      "database.Число землетрясений"
+    ]
+  },
+  {
+    "type": "scatterChart",
+    "fields": [
+      "database.Date.Изменение.Иерархия дат.Год",
+      "database.Date.Изменение.Иерархия дат.Квартал",
+      "database.Date.Изменение.Иерархия дат.Месяц",
+      "database.Date.Изменение.Иерархия дат.День",
+      "database.Средняя глубина",
+      "database.Средняя магнитуда"
+    ]
+  },
+  {
+    "type": "map",
+    "fields": [
+      "database.Longitude",
+      "database.Latitude"
+    ]
+  },
+  {
+    "type": "cardVisual",
+    "fields": [
+      "database.Число магнитудных типов"
+    ]
+  },
+  {
+    "type": "cardVisual",
+    "fields": [
+      "database.Средняя магнитуда"
+    ]
+  },
+  {
+    "type": "slicer",
+    "fields": [
+      "database.Type"
+    ]
+  }
+]

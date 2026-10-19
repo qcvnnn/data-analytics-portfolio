@@ -1,0 +1,8 @@
+createOrReplace
+
+	relationship Researchers_to_EarthquakeResearch
+		fromColumn: EarthquakeResearch.'Researcher ID'
+		toColumn: Researchers.'Researcher ID'
+		fromCardinality: many
+		toCardinality: one
+		crossFilteringBehavior: bothDirections

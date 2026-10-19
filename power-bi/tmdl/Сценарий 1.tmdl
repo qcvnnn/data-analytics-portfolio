@@ -1,0 +1,36 @@
+createOrReplace
+
+	table Researchers
+
+		column ResearcherID
+			dataType: int64
+			summarizeBy: none
+			sourceColumn: ResearcherID
+
+		column FullName
+			dataType: string
+			summarizeBy: none
+			sourceColumn: FullName
+
+		column Specialization
+			dataType: string
+			summarizeBy: none
+			sourceColumn: Specialization
+
+		partition Researchers = m
+			mode: import
+			source =
+					#table(
+						type table [
+							ResearcherID = Int64.Type,
+							FullName = text,
+							Specialization = text
+						],
+						{
+							{1, "Anna Petrova", "Seismology"},
+							{2, "Ivan Sokolov", "Geophysics"},
+							{3, "Maria Volkova", "Tectonics"},
+							{4, "Alexey Smirnov", "Seismic Monitoring"},
+							{5, "Elena Orlova", "Earthquake Risk"}
+						}
+					)

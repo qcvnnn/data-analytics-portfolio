@@ -1,0 +1,4 @@
+EVALUATE
+ADDCOLUMNS(
+	'EarthquakeResearch',
+	"ResearcherName", RELATED('Researchers'[FullName]))

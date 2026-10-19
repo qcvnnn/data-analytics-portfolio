@@ -1,0 +1,6 @@
+EVALUATE
+ADDCOLUMNS(
+    'EarthquakeResearch',
+    "EventMagnitude", RELATED('database'[Magnitude]),
+    "EventDepth", RELATED('database'[Depth])
+)

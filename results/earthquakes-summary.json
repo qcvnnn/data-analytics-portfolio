@@ -1,0 +1,27 @@
+{
+  "rows": 23412,
+  "unique_ids": 23412,
+  "duplicate_ids": 0,
+  "date_parse_failures": 0,
+  "date_min": "1965-01-02",
+  "date_max": "2016-12-30",
+  "type_counts": {
+    "Earthquake": 23232,
+    "Nuclear Explosion": 175,
+    "Explosion": 4,
+    "Rock Burst": 1
+  },
+  "magnitude_mean": 5.882530753459764,
+  "magnitude_min": 5.5,
+  "magnitude_max": 9.1,
+  "depth_median": 33.0,
+  "depth_mean": 70.76791124209807,
+  "peak_year": 2011,
+  "peak_year_count": 713,
+  "core_missing": {
+    "Magnitude": 0,
+    "Depth": 0,
+    "Latitude": 0,
+    "Longitude": 0
+  }
+}
